@@ -1,0 +1,10 @@
+[Unit]
+Description=System Resource Monitor
+ConditionPathExists=/usr/local/bin/sysmonitor.sh
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/sysmonitor.sh
+DynamicUser=yes
+LogsDirectory=sysmonitor
+StandardError=journal
